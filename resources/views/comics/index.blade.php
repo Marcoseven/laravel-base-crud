@@ -2,9 +2,6 @@
 
 @section('content')
 <div class="container">
-    <h2 class="text-center">
-        Comic  
-    </h2>
     <div>
         @foreach($comics as $comic)
          <div class="col">
