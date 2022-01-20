@@ -18,4 +18,4 @@ Route::get('/', function () {
 })->name('welcome');
 
 Route::get('comics', 'ComicController@index')->name('comics');
-Route::get('comics/{post}', 'ComicController@index')->name('comic');
+Route::get('comics/{post}', 'ComicController@show')->name('post'); 
