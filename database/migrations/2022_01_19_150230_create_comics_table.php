@@ -22,6 +22,8 @@ class CreateComicsTable extends Migration
             $table->string('series')->nullable();
             $table->date('sale_date')->nullable();
             $table->string('type')->nullable();
+            $table->string('artists')->nullable();
+            $table->string('writers')->nullable();
             $table->timestamps();
         });
     }

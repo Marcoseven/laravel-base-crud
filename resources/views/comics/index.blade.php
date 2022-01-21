@@ -10,9 +10,8 @@
         <div class="row gy-5">
             @foreach($comics as $comic) 
                  <div class="col-2">
-                    <a href="{{ route('comic', $comic->id) }}"></a>
                     <img src="{{ $comic->thumb }}" class="image_comic" alt="{{ $comic->title }}">
-                    <div class="text-uppercase">{{ $comic->series }}</div>
+                    <a href="{{ route('comic', $comic->id) }}" class="text-uppercase">{{ $comic->series }}</a>
                  </div>
              @endforeach
         </div>
