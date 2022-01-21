@@ -22,14 +22,14 @@
     <div class="container my-3">
         <div class="d-flex justify-content-between align-items-baseline mt-3">
             <div id="logo">
-                <img src="{{asset('img/dc-logo.png')}}" alt="immagine logo dc">
+                <img href="{{ route('home') }}" src="{{asset('img/dc-logo.png')}}" alt="immagine logo dc">
             </div>
             <!-- #nav-bar -->
             <div class="menu d-flex">
                 <nav id="nav-bar">
                     <ul class="d-flex">
                         <li><a href="#">CHACTERS</a></li>
-                        <li><a href="#">COMICS</a></li>
+                        <li><a href="{{ route('comics') }}">COMICS</a></li>
                         <li><a href="#">MOVIES</a></li>
                         <li><a href="#">TV</a></li>
                         <li><a href="#">GAMES</a></li>

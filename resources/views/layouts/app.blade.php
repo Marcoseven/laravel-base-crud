@@ -11,7 +11,7 @@
 </head>
 <body>
     @include('partials.header')
-    <main>@yield('content')</main>
+    <main id="site_main">@yield('content')</main>
     @include('partials.footer')
 </body>
 </html>
