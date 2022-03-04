@@ -4,6 +4,9 @@
         <div class="container">
             <ul class="d-flex justify-content-end">
                 <li>
+                    <a href="{{ route('admin') }}">Admin</a>
+                </li>
+                <li>
                     <a href="#">DC POWER<span>&trade;</span> VISA<span>&reg;</span></a>
                 </li>
                 <li id="list_item_dc">
@@ -30,7 +33,7 @@
                     <ul class="d-flex">
                         <li><a href="#">CHACTERS</a></li>
                         <li><a href="{{ route('comics') }}">COMICS</a></li>
-                        <li><a href="#">MOVIES</a></li>
+                        <li><a href="{{ route('movies') }}">MOVIES</a></li>
                         <li><a href="#">TV</a></li>
                         <li><a href="#">GAMES</a></li>
                         <li><a href="#">COLLECTIBLES</a></li>

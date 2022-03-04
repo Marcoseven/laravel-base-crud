@@ -13,7 +13,25 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', 'HomeController@index')->name('home');
-Route::get('/comics', 'ComicController@index')->name('comics');
-Route::get('comics/{comic}', 'ComicController@show')->name('comic'); 
+Route::get('/', function () {
+    return view('home');
+})->name('home');
 
+Route::view('admin', 'admin.dashboard')->name('admin');
+Route::resource('admin/comics', 'Admin\ComicController');
+Route::resource('admin/posts', 'Admin\PostController');
+
+/* comics_routes */
+
+/* Route::get('/comics', 'ComicController@index')->name('comics');
+Route::get('comics/{comic}', 'ComicController@show')->name('comic');  
+ */
+/* /comics_routes */
+
+
+
+Route::get('/movies', 'MovieController@index')->name('movies');
+Route::get('movies/{movie}', 'MovieController@show')->name('movie');
+
+Route::get('/comics', 'ComicController@index')->name('comics');
+Route::get('comics/{comics}', 'ComicController@show')->name('comic');

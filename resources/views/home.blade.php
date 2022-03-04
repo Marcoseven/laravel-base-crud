@@ -4,6 +4,6 @@
 @section('content')
 
 <div class="container my-5">
-    <h1 class="text-center">Welcome DC Comics</h1>
+    <h1 class="text-center">Welcome to DC Comics</h1>
 </div>
 @endsection

@@ -1,0 +1,243 @@
+@use "bootstrap";
+
+@import 'partials/variables';  
+@import 'partials/common';
+@import 'partials/comics';
+
+
+
+/* #site_header */
+#site_header {
+    height: auto;
+    #jumbotron {
+        height: 300px;
+        background-image: url("../img/jumbotron.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #row_visa {
+        background-color: $color_heavenly;
+        ul {
+            margin: 0;
+            a {
+                color: $link_visa !important;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    #list_item_dc {
+        margin-left: 5rem !important;
+        a:hover {
+            text-decoration: underline;
+        }
+        i {
+            color: #ffffff;
+            &:hover {
+                cursor: pointer;
+            }
+        }
+    }
+
+    #logo {
+        img:hover {
+            cursor: pointer;
+        }
+    }
+
+    #nav-bar {
+        ul {
+            margin: 0;
+            padding: 0;
+            li {
+                width: auto;
+                list-style: none;
+                a {
+                    padding: 2rem 0.5rem;
+                    font-size: 14px;
+                    color: $menu_link_color;
+                    &:hover {
+                        border-bottom: 5px solid $color_heavenly;
+                    }
+                }
+            }
+            #link_arrow i {
+                color: $color_heavenly !important;
+            }
+        }
+    }
+    #fname {
+        border: none;
+        border-bottom: 5px solid $color_heavenly !important;
+    }
+}
+/* /#site_header */
+
+/* #site_main */
+#site_main {
+    height: auto;
+    #row_cards {
+        background-color: $row_cards_background_color;
+        #button_series h2 {
+            width: 20%;
+            padding: 0.5rem 1rem;
+            margin: 0;
+            font-size: 20px;
+            background-color: $color_heavenly;
+            color: #ffffff;
+            text-align: center;
+            position: relative;
+            top: -20px;
+            left: 0;
+        }
+
+        .col-2 {
+            &:hover {
+                cursor: pointer;
+            }
+            .text-uppercase {
+                font-size: 13px;
+                color: #ffffff;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+
+    #row_icons {
+        background-color: $color_heavenly !important;
+        .col-2 {
+            margin: 2rem 0;
+            a {
+                display: flex;
+                align-items: center;
+                h6 {
+                    color: #ffffff;
+                    margin: 0 0.3rem;
+                    &:hover {
+                        text-decoration: underline;
+                    }
+                }
+            }
+        }
+    }
+
+    #button_more {
+        text-align: center;
+        button {
+            padding: 0.5rem 3rem;
+            margin-bottom: 1rem;
+            color: #ffffff;
+            background-color: $color_heavenly;
+            border: none;
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+/* /#site_main */
+
+/* #site_footer */
+#site_footer {
+    height: auto;
+    #row_links {
+        background-image: url("../img/footer-bg.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        #footer_links {
+            margin: 0.5rem 0;
+            padding: 0;
+        }
+
+        ul {
+            padding: 0 !important;
+        }
+
+        #links_dc {
+            margin: 0 2rem;
+        }
+
+        h4 {
+            color: #ffffff;
+            margin: 1rem 0;
+        }
+
+        li {
+            margin: 0.5rem 0;
+            text-align: left;
+            a {
+                color: gray;
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+
+        #image {
+            background-image: url("../img/dc-logo-bg.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            top: -25%;
+            right: 0%;
+            padding: 0;
+        }
+    }
+
+    #row_social {
+        height: 100px;
+        background-color: $footer_backgroundColor;
+        color: #ffffff;
+
+        #row_primary {
+            height: 100%;
+            justify-content: space-between;
+            button,
+            h4 {
+                font-size: 18px;
+            }
+
+            #social {
+                justify-content: end;
+                a {
+                    margin: 0 0.6rem;
+                }
+            }
+        }
+
+        button {
+            position: relative;
+            top: -10px;
+            width: auto;
+            padding: 0.5rem 1rem;
+            color: #ffffff;
+            border: 3px solid $color_heavenly;
+            background-color: $footer_backgroundColor;
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+
+        .col-6 {
+            align-items: center;
+        }
+
+        h4 {
+            color: $color_heavenly;
+            margin-right: 1rem;
+            margin-bottom: 0;
+            &:hover {
+                cursor: pointer;
+                text-decoration: underline;
+            }
+        }
+    }
+}
+/* /#site_footer */

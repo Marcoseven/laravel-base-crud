@@ -1,9 +1,12 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\Admin;
 
+use App\Http\Controllers\Controller;
 use App\Models\Post;
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
+
 
 class PostController extends Controller
 {
@@ -14,7 +17,8 @@ class PostController extends Controller
      */
     public function index()
     {
-        //
+        $posts = Post::paginate(10);
+        return view('admin.posts.index', compact('posts'));
     }
 
     /**
@@ -24,7 +28,7 @@ class PostController extends Controller
      */
     public function create()
     {
-        //
+        return view ('admin.posts.create');
     }
 
     /**
@@ -35,7 +39,12 @@ class PostController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $validated_data = $request->validate([
+            'title' => 'required|unique:posts',
+            'body' => 'nullable',
+        ]);
+        Post::create($validated_data);
+        return redirect()->route('admin.posts.index');
     }
 
     /**
@@ -46,7 +55,7 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
-        //
+        return view ('admin.posts.show', compact('post'));
     }
 
     /**
@@ -57,7 +66,7 @@ class PostController extends Controller
      */
     public function edit(Post $post)
     {
-        //
+        return view ('admin.posts.edit', compact('post'));
     }
 
     /**
@@ -69,7 +78,15 @@ class PostController extends Controller
      */
     public function update(Request $request, Post $post)
     {
-        //
+        $validated_data = $request([
+            'title' => [
+                'required', 
+                Rule::unique('posts')->ignore($post->id),
+            ],
+            'body' => ['nullable'],
+        ]);
+        $post->update($validated_data);
+        return redirect()->route('admin.posts.index')->with('È andata a buon fine la modifica');
     }
 
     /**
@@ -80,6 +97,7 @@ class PostController extends Controller
      */
     public function destroy(Post $post)
     {
-        //
+        $post->delete();
+        return redirect()->route('admin.posts.index')->with('È stato rimosso un post');
     }
 }
